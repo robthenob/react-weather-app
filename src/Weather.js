@@ -1,13 +1,22 @@
 import React from "react";
 import "./Weather.css";
+import axios from "axios";
 
 export default function Weather() {
+  function handleResponse(response) {
+    console.log(response.data);
+  }
+
+  const apiKey = "0b44bb10c5ed254a363948e06377120f";
+  let city = "London";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(handleResponse);
   return (
     <div className="Weather">
-      <div class="container">
-        <div class="weatherContainer">
-          <div class="row">
-            <div class="col-6" id="temperature">
+      <div className="container">
+        <div className="weatherContainer">
+          <div className="row">
+            <div className="col-6" id="temperature">
               <h1>
                 <span id="degree">7</span>
                 <span>
@@ -23,14 +32,14 @@ export default function Weather() {
                 </span>
               </h1>
             </div>
-            <div class="col-2">
+            <div className="col-2">
               <img
                 src="https://openweathermap.org/img/wn/02n@2x.png"
                 alt="weather icon"
                 id="icon"
               ></img>
             </div>
-            <div class="col-4">
+            <div className="col-4">
               <ul>
                 <li id="currentCondition">few clouds</li>
                 <li>
@@ -56,17 +65,17 @@ export default function Weather() {
           </div>
           <div className="Search">
             <form id="searchForm">
-              <div class="row">
-                <div class="col-6">
+              <div className="row">
+                <div className="col-6">
                   <input
                     type="search"
                     id="search-bar"
                     placeholder="Search by city name..."
-                    autocomplete="off"
-                    autofocus="on"
+                    autoComplete="off"
+                    autoFocus="on"
                   />
                 </div>
-                <div class="col-3">
+                <div className="col-3">
                   <button id="searchButton" type="submit" value="seach">
                     Search
                   </button>
