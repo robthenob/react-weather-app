@@ -63,6 +63,7 @@ export default function Weather() {
                     id="search-bar"
                     placeholder="Search by city name..."
                     autocomplete="off"
+                    autofocus="on"
                   />
                 </div>
                 <div class="col-3">
