@@ -30,7 +30,7 @@ export default function Weather(props) {
                 <h1>
                   <span id="degree">{Math.round(weatherData.temperature)}</span>
                   <span>
-                    <a href="#0" id="unit" class="active">
+                    <a href="#0" id="unit" className="active">
                       °C
                     </a>
                   </span>
