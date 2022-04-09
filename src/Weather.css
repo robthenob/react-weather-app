@@ -29,6 +29,9 @@ body {
   position: relative;
   top: -75px;
 }
+#bar {
+  color: white;
+}
 #unit {
   padding-left: 15px;
 }
@@ -119,5 +122,8 @@ h1 .active {
   text-decoration: none;
 }
 h1 .active:hover {
+  text-decoration: none;
+}
+a {
   text-decoration: none;
 }
