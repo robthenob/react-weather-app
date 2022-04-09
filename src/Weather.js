@@ -16,7 +16,7 @@ export default function Weather(props) {
       country: response.data.sys.country,
       condition: response.data.weather[0].description,
       humidity: response.data.main.humidity,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
     });
   }
