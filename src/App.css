@@ -1,8 +1,10 @@
 .App footer {
-  padding-top: 60px;
+  padding-top: 10px;
   text-align: center;
   opacity: 0.6;
+  color: black;
 }
 .App h1 {
   color: black;
+  text-align: center;
 }

@@ -35,7 +35,7 @@ export default function CurrentTemperature(props) {
           <span id="degree">{Math.round(fahrenheit)}</span>
           <span id="degree"></span>
           <span>
-            <a href="#" id="unit" onClick={showCelsius}>
+            <a href="#0" id="unit" onClick={showCelsius}>
               °C
             </a>
           </span>
