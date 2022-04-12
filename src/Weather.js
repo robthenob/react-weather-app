@@ -7,10 +7,11 @@ import Forecast from "./Forecast";
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
@@ -45,7 +46,7 @@ export default function Weather(props) {
           <div className="weatherContainer">
             <WeatherDisplay data={weatherData} />
 
-            <Forecast />
+            <Forecast coordinates={weatherData.coordinates} />
             <div className="Search">
               <form id="searchForm" onSubmit={handleSubmit}>
                 <div className="row">
