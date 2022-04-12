@@ -1,0 +1,23 @@
+.Forecast {
+  text-align: center;
+}
+.Forecast canvas {
+  padding-top: 0px;
+  width: 45px;
+}
+
+.Forecast h3 {
+  text-align: left;
+}
+
+#nextFiveDays {
+  font-size: 40px;
+  text-align: center;
+}
+#nextFiveTemp {
+  font-size: 20px;
+  text-align: center;
+}
+.forecastMin {
+  opacity: 0.6;
+}

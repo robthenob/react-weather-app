@@ -30,6 +30,7 @@ export default function WeatherDisplay(props) {
           </ul>
         </div>
       </div>
+
       <div className="LastUpdatedDate">
         <h2>
           <span id="lastUpdated">Last Updated: </span> <br />
