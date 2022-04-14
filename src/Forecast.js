@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-
 import "./Forecast.css";
 import WeatherForecastDay from "./WeatherForecastDay";
 import axios from "axios";
 
 export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
-  let [forecast, setForecast] = useState(null);
+  let [forecastData, setForecastData] = useState(null);
 
   function handleResponse(response) {
-    setForecast(response.data.daily);
+    setForecastData(response.data.daily);
     setLoaded(true);
   }
 
@@ -19,7 +18,7 @@ export default function Forecast(props) {
         <h3>Forecast</h3>
         <div className="row">
           <div className="col-2">
-            <WeatherForecastDay data={forecast[0]} />
+            <WeatherForecastDay data={forecastData[0]} />
           </div>
         </div>
       </div>
