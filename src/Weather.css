@@ -9,7 +9,7 @@ body {
     rgb(166, 226, 229) 0%,
     rgb(198, 232, 221) 100.2%
   );
-  height: 820px;
+  height: 760px;
   max-width: 700px;
   padding: 25px;
   margin: 30px auto;
@@ -52,12 +52,14 @@ li {
   text-transform: lowercase;
 }
 h2 {
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   font-size: 40px;
 }
-#lastUpdated {
+#lastUpdated,
+#currentDate {
   font-size: 20px;
 }
+
 h3 {
   font-size: 20px;
 }
@@ -66,7 +68,8 @@ h3 {
 #country,
 h4 {
   font-size: 40px;
-  padding-top: 40px;
+  padding-top: 20px;
+
   color: white;
 }
 #searchButton {
@@ -115,4 +118,29 @@ h1 .active:hover {
 }
 a {
   text-decoration: none;
+}
+@media (max-width: 766px) {
+  #search-bar {
+    width: 150px;
+  }
+  #cityName,
+  #country {
+    font-size: 30px;
+  }
+  #degree {
+    font-size: 100px;
+  }
+  .weatherContainer {
+    height: 1100px;
+  }
+  li {
+    text-align: center;
+    padding-left: 0px;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  .App h1 {
+    font-size: 40px;
+  }
 }

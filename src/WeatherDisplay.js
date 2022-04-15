@@ -7,15 +7,15 @@ export default function WeatherDisplay(props) {
   return (
     <div className="WeatherDisplay">
       <div className="row">
-        <div className="col-6" id="temperature">
+        <div className="col-md-6 col-sm-6" id="temperature">
           <CurrentTemperature celsius={Math.round(props.data.temperature)} />
         </div>
-        <div className="col-2">
+        <div className="col-md-2 col-sm-6">
           <div className="WeatherIcon">
             <WeatherIcon code={props.data.icon} alt={props.data.description} />
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-md-4 col-sm-12">
           <ul>
             <li id="currentCondition" className="text-capitalize">
               {props.data.condition}
@@ -33,7 +33,7 @@ export default function WeatherDisplay(props) {
 
       <div className="LastUpdatedDate">
         <h2>
-          <span id="lastUpdated">Last Updated: </span> <br />
+          <span id="lastUpdated">Last Updated: </span>
           <span id="currentDate">
             <FormattedDate date={props.data.date} />
           </span>
