@@ -6,7 +6,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <h1>Weather App</h1>
-        <Weather defaultCity="Vancouver" />
+        <Weather defaultCity="New York" />
         <footer>
           This website was coded by Randi Bradley and is{" "}
           <a
